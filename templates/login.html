@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">    
+    <title>Login | SiSAT</title>
+</head>
+<body>
+
+    <!-- Um alerta para quando a senha ou usuário são digitados errados-->
+    {% set msg = get_flashed_messages() %}
+    {% if msg %}
+        {% for m in msg %}
+            <script>alert('{{ m }}');</script>
+        {% endfor %}
+    {% endif %}
+    
+    <div class="login-box">
+        <div class="login-header">
+            <header>- SiSAT -</header>
+        </div>
+
+        <!--Precisei incluir o form com o post para o endereço adequado-->
+        <form action="/" method="POST">
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="e-mail" autocomplete="off" name='usuario' required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="senha" autocomplete="off" name='senha' required>
+            </div>
+            <div class="forgot">
+                <section>
+                    <a href="#">Esqueceu sua senha?</a>
+                </section>
+            </div>
+            <div class="input-submit">
+                <button class="submit-btn" id="submit"></button>
+                <label for="submit">Login In</label>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

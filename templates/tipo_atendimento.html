@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Bem-vindo!</title>
+</head>
+<body>
+    <!-- Um alerta para quando a senha ou usuário são digitados errados-->
+    {% set msg = get_flashed_messages() %}
+    {% if msg %}
+        {% for m in msg %}
+            <script>alert('{{ m }}');</script>
+        {% endfor %}
+    {% endif %}
+    <div class="atedimento-box">
+        <div class="login-header">
+            <header>Escolha uma opção de atendimento abaixo</header>
+        </div>
+        <div class="input-atedimento">
+            <form action="{{ url_for('cliente') }}" method="POST"> 
+                <button class="atedimento-preferencial-btn" id="submit" name="botao" value="0">Preferencial</button>
+                <button class="atedimento-comum-btn" id="submit" class="btn-comum-lbl" name="botao" value="1">Convencional</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

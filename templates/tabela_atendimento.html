@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Tabela Atedimento</title>
+</head>
+<body>
+    <div class="atendimento-geral-box">
+        <div class="tabela-atendimento-box">
+            <div class="texto-atendimento-box">
+                <div class="titulo-atendimento-header">
+                    <header>Instrução:</header>
+                </div>
+                <div class="texto-atendimento">
+                    Interaja com os botões ao lado conforme abaixo:
+                </div>
+                <div class="lista">
+                    <ul>
+                        <li>Clique em "Chamar", para solicitar um cliente.</li>
+                        <li>Clique em "Iniciar", assim que o cliente apresentar no guichê.</li>
+                        <li>Clique em "Encerrar", assim que finalizar o atendimento do cliente.</li>
+                        <li>Clique em "Cancelar", se o cliente não se apresentar ao guichê.</li>
+                    </ul>
+                    </br>
+                    <p>Não se esqueça, para cancelar é necessário marcar o cliente abaixo.</p>
+                </div>
+            </div>
+            <div class="btn-atendimento-box">
+                <form action="{{ url_for('atendimento') }}" method="POST">
+                    <div class="input-submit">
+                        <button class="proximo-btn" id="submit" name="botao" value="cha">Chamar</button>
+                    </div>
+                    <div class="input-submit">
+                        <button class="iniciar-btn" id="submit" name="botao" value="ini">Iniciar</button>
+                    </div>
+                    <div class="input-submit">
+                        <button class="encerrar-btn" id="submit" name="botao" value="enc">Encerrar</button>
+                    </div>
+                    <div class="input-submit">
+                        <button class="cancelar-btn" id="submit" name="botao" value="can">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="tabela-atendimento-box">
+            <table class="tabela-atendimento">
+                <tr class="linha-cabecalho">
+                    <th colspan="3">
+                        <div class="titulo-atendimento-header">
+                            <header>Próximos da fila</header>
+                        </div>
+                    </th>
+                </tr>
+                <tbody>
+                    {% for i in data.dados %}
+                    <tr>
+                        <td><input id="radio" type="radio" name="check" value="{{i.id_cliente}}" unique></td>
+                        <td>{{i.id_cliente}}</td>
+                        <td>{{i.ds_cliente}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

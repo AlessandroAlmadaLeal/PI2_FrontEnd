@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #dfdfdf;
+}
+
+/*Estilos login.html*/
+.login-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.login-header{
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+.login-header header{
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+}
+.input-box .input-field{
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0, 0.05);
+    outline: none;
+    transition: .3s;
+}
+
+/*Estilos Tipo Atendimento*/
+.atedimento-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.input-atedimento{
+    display:flex;
+    flex-direction: column;
+}
+.atedimento-preferencial-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 1rem;
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 20px;
+}
+.atedimento-comum-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-comum-lbl{
+    position: absolute;
+    top: 75%;
+    left: 78%;
+    width: 100%;
+    color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.atedimento-preferencial-btn:hover{
+    background: #000;
+    transform: scale(1.05,1);
+}
+.atedimento-comum-btn:hover{
+    background: #000;
+    transform: scale(1.05,1);
+}
+
+/*Estilo Painel Atendimento*/
+.senha-atual-box{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction:row;
+    width: 640px;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.painel{
+    font-size: 120px;
+}
+.painel-proximo{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px;
+}
+.painel-header header{
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+}
+
+/*Estilos Tabela Atendimento*/
+.atendimento-ageral-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.tabela-atendimento-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 640px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.titulo-atendimento-header header{
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+}
+.lista {
+    font-size: 15px;
+    margin: 10px;
+}
+.btn-atendimento-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.proximo-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 1rem;
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 22px;
+}
+.iniciar-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 1rem;
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 22px;
+}
+.encerrar-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 1rem;
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 22px;
+}
+.cancelar-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 22px;
+}
+.tabela-atendimento{
+    justify-content: center;
+    width: 100%;
+}
+
+li{
+    font-size: 10px;
+}
+
+tbody{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Estilos Gerais*/
+::placeholder{
+    font-weight: 500;
+    color: #222;
+}
+.input-field:focus{
+    width: 105%;
+}
+.forgot{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+section{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+#check{
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+section a{
+    color: #555;
+}
+.input-submit{
+    position: relative;
+}
+.submit-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.input-submit label{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.submit-btn:hover{
+    background: #000;
+    transform: scale(1.05,1);
+}
+.sign-up-link{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.sign-up-link a{
+    color: #000;
+    font-weight: 600;
+}
